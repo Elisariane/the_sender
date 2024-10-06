@@ -87,7 +87,7 @@ def iniciar_envio():
     if not caminho_csv or not coordenador_email or not gerente_email or not superintendente_email or not email_user or not password_user:
         messagebox.showwarning("Atenção", "Por favor, preencha todos os campos.")
         return
-    send_emails(caminho_csv, coordenador_email, gerente_email, superintendente_email, email_user, password_user)
+    send_emails(caminho_csv, coordenador_email.replace(" ", ""), gerente_email.replace(" ", ""), superintendente_email.replace(" ", ""), email_user.replace(" ", ""), password_user)
     messagebox.showinfo("Sucesso", "Todos os e-mails foram enviados.")
 
 # Configuração da Janela
